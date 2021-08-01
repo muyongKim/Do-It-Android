@@ -10,7 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
-            android:name=".MainActivity"
+            android:name=".Orientation2Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".OrientationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EventActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
