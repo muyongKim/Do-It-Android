@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
+            android:name=".ToastActivity"
+            android:exported="true" />
+        <activity
             android:name=".Orientation2Activity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".OrientationActivity"
             android:exported="true" />
