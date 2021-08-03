@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
+            android:name=".Parcelable2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".ParcelableActivity"
+            android:exported="true" />
+        <activity
             android:name=".CallIntentActivity"
             android:exported="true" />
         <activity
