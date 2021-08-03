@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
+            android:name=".LifeCycleActivity"
+            android:exported="true" />
+        <activity
             android:name=".Parcelable2Activity"
             android:exported="true" />
         <activity
