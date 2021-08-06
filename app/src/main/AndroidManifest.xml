@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
+            android:name=".Fragment2Activity"
+            android:exported="true" />
+        <activity
             android:name=".FragmentActivity"
             android:exported="true" />
         <activity
