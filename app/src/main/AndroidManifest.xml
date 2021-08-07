@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy">
         <activity
+            android:name=".PagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Tab2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".TabActivity"
+            android:exported="true" />
+        <activity
             android:name=".OptionActivity"
             android:exported="true" />
         <activity
