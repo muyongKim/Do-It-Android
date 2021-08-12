@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ThreadActivity"
+        <activity android:name=".AsyncTaskActivity"
             android:exported="true"/>
+        <activity
+            android:name=".ThreadActivity"
+            android:exported="true" />
         <activity
             android:name=".KeypadActivity"
             android:exported="true"
