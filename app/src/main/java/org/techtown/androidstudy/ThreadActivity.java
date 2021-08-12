@@ -1,15 +1,21 @@
 package org.techtown.androidstudy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+// 21.08.12 thread
 public class ThreadActivity extends AppCompatActivity {
     TextView textView;
+
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +23,8 @@ public class ThreadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_thread);
 
         textView = findViewById(R.id.textView);
+
+        // MainHandler handler = new MainHandler();
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -40,8 +48,36 @@ public class ThreadActivity extends AppCompatActivity {
                 value += 1;
                 Log.d("MyThread", "value : " + value);
 
-                textView.setText("값 : " + value);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView.setText("값 : " + value);
+                    }
+                });
+
+                /*
+                Message message = handler.obtainMessage();
+                Bundle bundle = new Bundle();
+                bundle.putInt("value", value);
+                message.setData(bundle);
+
+                handler.sendMessage(message);
+                */
             }
         }
     }
+
+    /*
+    class MainHandler extends Handler {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+
+            Bundle bundle = msg.getData();
+            int value = bundle.getInt("value");
+
+            textView.setText("값 : " + value);
+        }
+    }
+     */
 }
