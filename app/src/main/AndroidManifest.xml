@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidStudy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HttpActivity"
+        <activity android:name=".VolleyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HttpActivity"
             android:exported="true" />
         <activity
             android:name=".SocketActivity"
